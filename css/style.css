@@ -849,10 +849,14 @@ footer {
     max-width: 784px;
     margin: 0 auto;
     padding-top: 50px;
-    letter-spacing: 5px;
-
+    letter-spacing: 0.5px;
 
 }
+
+.about2-text2 {
+    margin-bottom: 30px;
+}
+
 
 .like-section {
     background: rgba(76, 184, 231, 0.5);
@@ -960,7 +964,7 @@ footer {
 
 .works-section {
     text-align: center;
-    padding: 180px 0 120px;
+    padding: 180px 0 0px;
     background-color: #fff;
 }
 
@@ -1023,12 +1027,14 @@ footer {
 
 /* ====== ギャラリー部分 ====== */
 .works-gallery {
+    padding: 0 20px;
     display: flex;
     flex-wrap: wrap;
-    gap: 40px 4%;
+    gap: 40px;
     max-width: 1000px;
     margin: 0 auto;
 }
+
 
 /* 各ボックス */
 .work-item {
@@ -1099,7 +1105,7 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 75px;
-    margin-top: 250px;
+    margin-top: 380px;
 }
 
 .kadai-tittle {
@@ -1122,6 +1128,7 @@ footer {
     justify-content: center;
     gap: 210px;
     margin-top: 150px;
+    padding: 0 20px;
 }
 
 .kadai-tittle-wrap2 {
@@ -1130,19 +1137,16 @@ footer {
 
 .logo-pic {
     width: 800px;
+
 }
 
 
 /* ボタン */
 .btn2 {
     display: inline-flex;
-    /* 横並びにする */
     flex-direction: row;
-    /* 横並びの明示 */
     align-items: center;
-    /* 縦中央揃え */
     gap: 10px;
-    /* 線と文字の間隔 */
     font-size: 18px;
     text-decoration: none;
     cursor: pointer;
@@ -1150,27 +1154,23 @@ footer {
     border-radius: 30px;
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
     z-index: 10;
-
     margin-top: 190px;
     margin-left: 129px;
 }
 
-/* 左の横線 */
+
 .btn2 .line2 {
     display: inline-block;
-    /* 横に並べるため inline-block に変更 */
     width: 40px;
     height: 2px;
     background-color: #0051a6;
     transition: width 0.3s ease;
 }
 
-/* ホバーで線を伸ばす */
 .btn2:hover .line2 {
     width: 60px;
 }
 
-/* ボタン hover / active */
 .btn2:hover {
     background-color: #0051a6;
     color: #fff;
@@ -1324,9 +1324,9 @@ footer {
     width: 30px;
     height: 2px;
     background: #fff;
-    /* 白色 */
 }
 
+/* 正しい回転指定 */
 .img-wrap .close-btn::before {
     transform: rotate(45deg);
 }
@@ -1338,6 +1338,35 @@ footer {
 /* ホバーで拡大 */
 .img-wrap .close-btn:hover {
     transform: scale(1.2);
+}
+
+@media (max-width: 1025px) {
+
+    .header-logo {
+        width: 110px;
+    }
+
+    .pc-nav ul li.contact-btn {
+        width: 80px;
+        height: 80px;
+        top: 0;
+        margin-left: 10px;
+    }
+
+    .pc-nav ul li.contact-btn a {
+        font-size: 14px;
+
+    }
+
+    .works-gallery {
+        justify-content: center;
+
+    }
+
+    .footer-nav ul {
+        gap: 50px;
+    }
+
 }
 
 
@@ -1502,7 +1531,7 @@ footer {
     }
 
     h2 {
-        width: 120px;
+        width: 190px;
     }
 
     .about-logo {
@@ -1536,6 +1565,7 @@ footer {
     }
 
     .about-text {
+        width: auto;
         font-size: 14px;
         line-height: 2.14;
         margin-top: 0;
@@ -1593,16 +1623,17 @@ footer {
     }
 
     .btn1 {
-        padding: 25px 5px;
-
+        padding: 15px 20px;
     }
+
+
 
 
     /* フォーム全体 */
     .form-wrap {
         width: 100%;
         margin-top: 120px;
-        padding: 70px 20px;
+        padding: 70px 15px;
         border-radius: 40px;
     }
 
@@ -1611,6 +1642,7 @@ footer {
     .contact__item textarea {
         width: 100%;
         font-size: 16px;
+
     }
 
     /* ラベル */
@@ -1626,8 +1658,8 @@ footer {
 
     /* ボタン */
     .submit-btn input {
-        width: 100%;
-        padding: 14px 0;
+        width: 180px;
+        padding: 13px 0px;
     }
 
     /* 行間調整 */
@@ -1652,6 +1684,24 @@ footer {
         width: 330px;
     }
 
+    .pc-br {
+        display: none;
+    }
+
+
+    .about2-text {
+        max-width: 330px;
+        margin: 0 auto;
+        padding: 0 20px;
+        text-align: left;
+        font-size: 14px;
+        line-height: 2;
+        margin-bottom: 100px;
+        letter-spacing: 0.8px;
+    }
+
+
+
     .like-logo {
         margin-bottom: 40px;
     }
@@ -1671,16 +1721,7 @@ footer {
         gap: 20px;
     }
 
-    /* about の文章幅 */
-    .about2-text {
-        max-width: 330px;
-        margin: 0 auto;
-        text-align: left;
-        font-size: 14px;
-        line-height: 1.92;
-        margin-bottom: 100px;
 
-    }
 
     .like-box2 {
         display: none;
@@ -1865,37 +1906,44 @@ footer {
         margin-top: 35px;
     }
 
+
     .kadai-tittle-wrap {
-        margin-top: 0;
-        gap: 0;
         flex-direction: column;
+        gap: 40px;
         align-items: center;
+        margin-top: 60px;
+
     }
+
 
     .kadai-tittle-wrap1 {
+        width: 100%;
         max-width: 330px;
-        padding-right: 175px;
+        padding-right: 0;
     }
 
-    .kadai-tittle-wrap2 {
-        max-width: 330px;
 
+    .kadai-tittle-wrap2 {
+        width: 100%;
+        max-width: 330px;
     }
 
     .kadai-p {
         font-size: 12px;
+        line-height: 1.7;
     }
 
 
     .btn2 {
-        margin-top: 70px;
+        max-width: 140px;
+        width: 100%;
+        padding: 10px 16px;
+        margin: 60px auto 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-
-    .btn-wrap {
-        margin-bottom: 50px;
-        gap: 60px;
-    }
 
     .img-wrap .close-btn {
         top: -25px;
@@ -1910,6 +1958,16 @@ footer {
 
     .works-section {
         padding: 100px 0 0px;
+    }
+
+    .pc-btn,
+    .sp-btn {
+        width: 100px;
+        height: 100px;
+    }
+
+    .btn-wrap {
+        gap: 80px;
     }
 
     /* フッター */
