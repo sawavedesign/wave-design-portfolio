@@ -142,17 +142,6 @@
 
         });
 
-        // // クラスの付け外しのみ
-        // const text = document.querySelector('.text');
-
-        // text.classList.add('is-active');
-
-        // setInterval(() => {
-        //     text.classList.toggle('is-active');
-        // }, 3000);
-
-
-
 
         const modal = document.getElementById('imgModal');
         const modalImg = document.getElementById('modalImg');
@@ -163,20 +152,26 @@
                 const imgSrc = btn.getAttribute('data-img');
                 modalImg.src = imgSrc;
                 modal.style.display = 'flex';
+                document.querySelector('.hamburger').style.display = 'none'; // ←ここに入れる！
             });
         });
+
 
         // 閉じるボタン
         closeBtn.addEventListener('click', () => {
             modal.style.display = 'none';
+            document.querySelector('.hamburger').style.display = 'block';
+
         });
 
         // 背景クリックで閉じる
         modal.addEventListener('click', e => {
             if (e.target === modal) {
                 modal.style.display = 'none';
+                document.querySelector('.hamburger').style.display = 'block';
             }
         });
+
 
     </script>
 
