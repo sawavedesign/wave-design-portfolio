@@ -261,7 +261,7 @@ h2 {
 .concept1,
 .concept2 {
     text-align: left;
-    width: 600px;
+    width: 550px;
     max-width: 90%;
 
 }
@@ -277,9 +277,7 @@ h2 {
     margin-bottom: 75px;
     display: flex;
     align-items: center;
-    /* テキストと線を中央揃え */
     gap: 20px;
-    /* テキストと線の間隔 */
 }
 
 .concept1::after {
@@ -290,17 +288,13 @@ h2 {
 }
 
 
-
 .concept2 {
-    max-width: 100%;
     white-space: nowrap;
     font-size: 32px;
     line-height: 1.625;
     margin-bottom: 130px;
-    letter-spacing: 0.7rem;
+    letter-spacing: 0.4rem;
 }
-
-
 
 
 
